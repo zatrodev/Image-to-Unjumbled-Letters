@@ -42,7 +42,7 @@ function imgToUnjumbled(img){
                 unjumbled += String.fromCharCode(letter.charCodeAt(0) - 1)
         }
 
-        document.getElementById("output").textContent = unjumbled;
+        document.getElementById("output").textContent = `${unjumbled} (${result.text})`;
     }).finally(() => {
         dropImg.innerHTML = "";
         dropImg.contentEditable = true;
