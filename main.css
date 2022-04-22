@@ -25,6 +25,7 @@ body {
   overflow: auto;
   margin: 10px auto;
   border-radius: 8px;
+  caret-color: transparent;
 }
 
 #container {

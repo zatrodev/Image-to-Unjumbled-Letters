@@ -6,7 +6,13 @@ dropImg.addEventListener("input", () => {
     dropImg.contentEditable = false;
     const img = document.getElementsByTagName("img")[0];
     
-    imgToUnjumbled(img.src);
+    if (!img){
+        document.getElementById("output").textContent = "wag kang mag-input ng text bobo — picture lang";
+        dropImg.textContent = "";
+        dropImg.contentEditable = true;
+    }
+    else 
+        imgToUnjumbled(img.src);
 })
 
 tipsDropDown.onclick = () => {
