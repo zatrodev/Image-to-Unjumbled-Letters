@@ -2,6 +2,7 @@
 
 body {
   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 #center {
@@ -9,7 +10,6 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Poppins', sans-serif;
 }
 
 #drop-img {
@@ -48,3 +48,38 @@ body {
 #output {
   margin-left: 20px;
 }
+
+#click-me {
+  position: relative;
+  z-index: 99;
+  cursor: pointer;
+  background: url("https://img.icons8.com/fluency-systems-regular/32/000000/down-squared.png");
+  width: 32px;
+  height: 32px;
+
+  outline: 0;
+}
+
+#tip {
+  z-index: 99;
+  position: absolute;
+  text-align: justify;
+  font-size: 13px;
+  color: white;
+  margin-left: 5px;
+  width: 260px;
+  height: 0;
+  border-radius: 5px 15px 15px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  transition: height .3s ease;
+}
+
+#info {
+  position: absolute;
+  width: calc(415px - 180px);
+  padding: 5px;
+  color: black;
+  display: none;
+  margin-left: 7px;
+} 
