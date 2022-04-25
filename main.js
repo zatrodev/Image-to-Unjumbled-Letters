@@ -36,7 +36,7 @@ function imgToUnjumbled(img){
     Tesseract.recognize(img).then(function(result){
         let unjumbled = "";
         for (let letter of result.text){
-            if (letter == " ")
+            if (letter == " " || "/[.,\\/#!$%^&*;:{}=?+-_`~()]/g".indexOf(letter) !== -1)
                 unjumbled += letter;
             else
                 unjumbled += String.fromCharCode(letter.charCodeAt(0) - 1)
