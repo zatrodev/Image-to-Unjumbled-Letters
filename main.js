@@ -34,6 +34,7 @@ tipsDropDown.onclick = () => {
 
 function imgToUnjumbled(img){
     Tesseract.recognize(img).then(function(result){
+        console.log(result.text);
         let unjumbled = "";
         for (let letter of result.text){
             if (letter == " " || "/[.,\\/#!$%^&*;:{}=?+-_`~()]/g".indexOf(letter) !== -1)
